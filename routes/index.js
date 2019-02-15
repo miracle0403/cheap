@@ -15,10 +15,6 @@ site = 'https://api.sandbox.namecheap.com/xml.response?'
 var Namecheap = new namecheap(key, user, ip, site)
 
 
-var domain = dg.dg( domainn, tld, function(err ){
-	if( err ) throw err;
-});
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'CHEAP WEB SCRIPTS'});
@@ -85,14 +81,13 @@ router.get('/documentation', function(req, res, next) {
 router.post('/domainsearch', function(req, res, next) {
 	var domainn = req.body.domainsearch;
 	var tld  = ['.com', '.me', '.co', '.co.uk', '.org', '.net', '.tech', '.online', '.xyz'];
-	var domain = namecheap.forecast( domainn, tld, function(err ){
+	var domain = dg.dg( domainn, tld, function(err){
 		if( err ) throw err;
-		var De = Namecheap.Domain.check(Namecheap.ip, Namecheap.link, domain, function( err ){
+	});
+	Namecheap.Domain.check(Namecheap.ip, Namecheap.link, domain, function( err, result){
 		if( err ) throw err;
-		await 
-		console.log(De)
+		console.log(result)
 		res.render('domain', { title: 'DOMAIN SEARCH' });
-		});
 	});
 });
 

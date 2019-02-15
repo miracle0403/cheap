@@ -5,7 +5,7 @@ util = require( 'util' );
 request = require( 'request' );
 convert = require( 'xml-js');
 functions = require( './functions.js' );
-callback = function( err){
+callback = function( err, result){
 	if( err )throw err;
 }
 //configurations set now.
@@ -17,15 +17,14 @@ var namecheap = function (key, user, ip, site){
 	this.link = site + 'ApiUser='+user+'&ApiKey='+ key + '&UserName=' + user + '&';
 	this.defaults = {};
 }
-
-
+				
 
 namecheap.prototype = {
 	get Domain(){
 		var instance = this;
 		return {
-			check: function(ip, link, DomainList, callback ){
-				//get the domain variable.
+			check: function(ip, link, DomainList, callback){
+				console.log(callback)
 				this.ip = ip;
 				this.link = link;
 				this.DomainList = DomainList;
@@ -36,9 +35,9 @@ namecheap.prototype = {
 				request.get( url, function(error, response, body){
 					if(error) throw error;
 					//now change back to json since its xml format.
-					var result1 = convert.xml2json(body, {compact: true, spaces: 4});
-					//convert to js object
-					var result = JSON.parse(result1)
+					result1 = convert.xml2json(body, {compact: true, spaces: 4});
+					result = JSON.parse(result1);
+					//console.log(result.ApiResponse) 
 					return result;
 				});
 			}

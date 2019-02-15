@@ -2,110 +2,131 @@
 <br>
 <!-- domain search-->
 <div class = "container-fluid text-center">
-
-<h3 class = "container text-success" id ="domain"><b>DOMAIN SEARCH</b></h3>
-
-<form action = "/domainsearch" method = "POST" class="form-inline my-2 my-lg-0">
-      <input name = "domainsearch" id = "domainsearch" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn-block btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</div><br>
-
-<div class = "container-fluid text-center">
-<div class = "bg bg-success">
-<h3 class = "text-white container"><b>PUBLISH YOUR IDEA</b></h3></div>
-<p class = "text-justify">
+	<h3 class = "container text-success" id ="domain"><b>DOMAIN SEARCH</b></h3>
+	<form action = "/domainsearch" method = "POST">
+		<div class = "form-row">
+			<div class = "form-group col-md-10">
+				<input name = "domainsearch"  type="search" id = "domainsearch" class="form-control"  placeholder="Search Domain" aria-label="Search">
+			</div>
+			<div class = "form-group col-md-2">
+				<button class="btn-block btn btn-outline-success" type="submit">Search</button>
+			</div>
+		</div>
+	</form>
+	
+	<!-- end of domain search-->
+	<br>
+	<div class = "container bg bg-warning">
+		<hr>
+		<h3 class = "text-white container"><b>PUBLISH YOUR IDEA</b></h3>
+		<hr>
+	</div>
+	<p class = "text-justify container-fluid">
 Publish your idea to the web with our hosting packages. Our shared hosting packages supports <strong>NODEJS, PYTHON and PHP</strong> with pricing starting at only N200/month <a href = "/sharedhosting"  target = "_blank">Learn more.</a>
-</p>
+	</p>
+	<!-- end of publish idea -->
+	<br>
+	<div class = "container text-light bg bg-success">
+		<hr>
+		<h3><b>BUILD YOUR WEBSITE</b></h3>
+		<hr>
+	</div>
+	<div class = "text-justify container-fluid">
+		<p>With <b>{{title}}</b> you are rest assured of the best website because we are sure  you deserve the very best. We provide you with very affordable, bug free website design tailored to your taste which will boost your sales.</p>
+		<p>You will not regret giving us a chance to make your business have its beautiful website it deserves.
+		<a href = "/demo" target = "_blank">
+		Check out our collections here</a></p>
+	</div>
+	<!-- end of build website-->
+	<br>
+	<!-- ssl section-->
+	<div class = "text-center text-white container bg bg-warning"> 
+		<hr><h3> <b>SSL CERTIFICATES</b></h3><hr>
+	</div>
+	<div class = "text-justify container-fluid">
+		<p>
+		<strong>Avoid browser <span class = "text-danger">warning</span></strong>, improve your SEO and secure your customers' information with our SSL certificates starting at only N4,500/yr. <a href = "/ssl"> Learn more</a><br><br>
+		We are giving out up to 50 POSITIVE SSL to our users this year at a dicount price of <b>N1500</b> when you buy or transfer a domain to us. No coupon code required. Just add the SSL certificate to your order.
 
-<div class = "container text-light bg bg-success">
-<hr>
-<h3><b>BUILD YOUR WEBSITE</b></h3>
-<hr>
-</div>
-<div class = "text-justify">
-With <b>{{title}}</b> you are rest assured of the best website because we are sure  you deserve the very best. <br><br>We provide you with very affordable, bug free website design tailored to your taste which will boost your sales.<br><br>You will not regret giving us a chance to make your business have its beautiful website it deserves.
-<a href = "/demo" target = "_blank">
-Check out our collections here</a>
-</div>
-
-<!-- ssl section-->
-<div class = "text-center text-white container bg bg-success"> <hr>
-<h3> <b>SSL CERTIFICATES</b></h3><hr>
-</div>
-<div class = "text-justify">
-<p>
-Avoid browser warning, improve your SEO and secure your customers' information with our SSL certificates starting at only N4,500/yr. <a href = "/ssl"> Learn more</a><br><br>
-We are giving out up to 50 POSITIVE SSL to our users this year at a dicount price of <b>N1500</b> when you buy or transfer a domain to us. No coupon code required. Just add the SSL certificate to your order.
-
-</p>
-</div>
-<div class = "bg bg-success text-center text-white">
-<hr>
-<h3> WHY US? </h3>
-<hr>
-</div>
-<div class = "text-justify">
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active">
- <div class="container">
- <ul>
- <li>Active and Friendly Support</li>
- <li>Beautiful and bug free websites</li>
- <li>Affordable websites</li>
- <li>Quality and Affordable Domain names</li>
- <li><b>NODEJS, PYTHON, PHP </b> support in all our shared hosting</li>
- <li>No <b>SET UP FEE</b></li>
- <li>Monthly Payments available for all hosting packages.</li>
- <li>Fast Server</li>
-
- <li>Shared hosting starting at <b> ONLY N200 </b></li>
- <li>No hidden charges</li>
-<li>Free WHOIS protection for our .com, .org and .net domains</li>
- 
- </ul>
- </div>
-
-</div>
-<div class="carousel-item">
-  <div class="container">
- <ul>
- <li>Active and Friendly Support</li>
- <li>Beautiful and bug free websites</li>
- <li>Affordable websites</li>
- <li>Quality and Affordable Domain names</li>
- <li><b>NODEJS, PYTHON, PHP </b> support in all our shared hosting
-</li>
- <li>No <b>SET UP FEE</b></li>
- <li>Monthly Payments available for all hosting packages.</li>
- <li>Fast Server</li>
- <li>Shared hosting starting at <b> ONLY N200 </b></li> 
- <li> No hidden charges</li>
- <li>Free WHOIS protection for our .com, .org and .net domains</li> 
- </ul>
- </div>
-
-</div> 
-<div class="carousel-item"> 
- <div class="container">
- <ul>
- <li>Active and Friendly Support</li>
- <li>Beautiful and bug free websites</li>
- <li>Affordable websites</li>
- <li>Quality and Affordable Domain names</li>
- <li><b>NODEJS, PYTHON, PHP</b> support in all our shared hosting</li>
- <li>No <b>SET UP FEE</b></li>
- <li>Monthly Payments available for all hosting packages.</li>
- <li>Fast Server</li>
-
- <li>Shared hosting starting at <b> ONLY N200 </b></li>
- <li>No hidden charges</li>
- <li>Free WHOIS protection for our .com, .org and .net domains</li>
- </ul>
- </div>
-
- </div> </div> </div>
-</div>
+		</p>
+	</div>
+	<div class = "bg bg-success container text-center text-white">
+		<hr>
+		<h3> <b>WHY US? </b></h3>
+		<hr>
+	</div>
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="container-fluid text-justify">
+					<ul>
+						<div class = "row">
+							<div class = "col-md-6">
+								<li>Active and Friendly Support</li>
+								<li>Beautiful and bug free websites</li>
+								<li>Affordable websites</li>
+								<li>No hidden charges</li>
+								<li>Monthly Payments available for all hosting packages.</li>
+								<li>Fast Server</li>
+							</div>
+							<div class = "col-md-6">
+								<li>Quality and Affordable Domain names</li>
+								<li><b>NODEJS, PYTHON, PHP </b> support in all our shared hosting</li>
+								<li>No <b>SET UP FEE</b></li>
+								<li>Free WHOIS protection for our .com, .org and .net domains</li>
+								<li>Shared hosting starting at <b> ONLY N200 </b></li>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="container-fluid text-justify">
+					<ul>
+						<div class = "row">
+							<div class = "col-md-6">
+								<li>Active and Friendly Support</li>
+								<li>Beautiful and bug free websites</li>
+								<li>Affordable websites</li>
+								<li>No hidden charges</li>
+								<li>Monthly Payments available for all hosting packages.</li>
+								<li>Fast Server</li>
+							</div>
+							<div class = "col-md-6">
+								<li>Quality and Affordable Domain names</li>
+								<li><b>NODEJS, PYTHON, PHP </b> support in all our shared hosting</li>
+								<li>No <b>SET UP FEE</b></li>
+								<li>Free WHOIS protection for our .com, .org and .net domains</li>
+								<li>Shared hosting starting at <b> ONLY N200 </b></li>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="container-fluid text-justify">
+					<ul>
+						<div class = "row">
+							<div class = "col-md-6">
+								<li>Active and Friendly Support</li>
+								<li>Beautiful and bug free websites</li>
+								<li>Affordable websites</li>
+								<li>No hidden charges</li>
+								<li>Monthly Payments available for all hosting packages.</li>
+								<li>Fast Server</li>
+							</div>
+							<div class = "col-md-6">
+								<li>Quality and Affordable Domain names</li>
+								<li><b>NODEJS, PYTHON, PHP </b> support in all our shared hosting</li>
+								<li>No <b>SET UP FEE</b></li>
+								<li>Free WHOIS protection for our .com, .org and .net domains</li>
+								<li>Shared hosting starting at <b> ONLY N200 </b></li>
+							</div>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </div>
