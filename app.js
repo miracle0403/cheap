@@ -3,15 +3,24 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var fs = require( 'fs' );
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var hbs = require( 'hbs' );
+var db  = require( './db.js' );
 var app = express();
+var tables = require ( './tables.js' );
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+
+var mainseoTemplate = fs.readFileSync(__dirname + '/views/mainseo.hbs', 'utf8');
+hbs.registerPartial('mainseo', mainseoTemplate); 
+
+var slideTemplate = fs.readFileSync(__dirname + '/views/slide.hbs', 'utf8');
+hbs.registerPartial( 'slide', slideTemplate );
 
 app.use(logger('dev'));
 app.use(express.json());
