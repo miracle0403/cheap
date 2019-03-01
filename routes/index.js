@@ -7,6 +7,18 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'CHEAP WEB SCRIPTS'});
 });
 
+
+/* Get cart. */
+router.get('/cart', function(req, res, next) {
+  res.render('cart', { title: 'MY CART'});
+});
+
+
+/* GET domains. */
+router.get('/domains', function(req, res, next) {
+  res.render('domains', { title: 'DOMAIN SEARCH RESULTS'});
+});
+
 //affiliate link
 router.get('/ref=:affiliate', function(req, res, next) {
 	var affiliate = req.params.affiliate;
