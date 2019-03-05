@@ -1,6 +1,23 @@
 var express = require('express');
 var router = express.Router();
 var db = require( '../db.js' );
+var namecheap = require( '../Namecheapjs' ); 
+var dg = require( '../domain-generator' );
+
+var ip, key, user, site, domainn, tld;
+
+ip = '192.250.236.94' || '105.112.45.234' || '105.112.29.82' ;
+domainn = 'fugu.com';
+tld = ['.com', '.co', '.com.uk', '.co.uk']
+key = 'd6b25ae2e2fb466d9b27c209f691400d';
+user = 'Miracle0403';
+site = 'https://api.sandbox.namecheap.com/xml.response?'
+var Namecheap = new namecheap(key, user, ip, site)
+
+
+var domain = dg.dg( domainn, tld, function(err ){
+	if( err ) throw err;
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -63,6 +80,21 @@ router.get('/documentation', function(req, res, next) {
 	});
 });
 
+
+//domain search
+router.post('/domainsearch', function(req, res, next) {
+	var domainn = req.body.domainsearch;
+	var tld  = ['.com', '.me', '.co', '.co.uk', '.org', '.net', '.tech', '.online', '.xyz'];
+	var domain = namecheap.forecast( domainn, tld, function(err ){
+		if( err ) throw err;
+		var De = Namecheap.Domain.check(Namecheap.ip, Namecheap.link, domain, function( err ){
+		if( err ) throw err;
+		await 
+		console.log(De)
+		res.render('domain', { title: 'DOMAIN SEARCH' });
+		});
+	});
+});
 
 /* GET error 404. */
 router.get('*', function(req, res, next) {

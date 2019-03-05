@@ -1,0 +1,25 @@
+{
+  "name": "domain-generator",
+  "version": "1.0.2",
+  "description": "A simple domain generator for custom domain search.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miracle0403/domain-generator.git"
+  },
+  "keywords": [
+    "domain-generator",
+    "domain",
+    "tld",
+    "namecheap"
+  ],
+  "author": "Miracle Lawrence",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miracle0403/domain-generator/issues"
+  },
+  "homepage": "https://github.com/miracle0403/domain-generator#readme"
+}

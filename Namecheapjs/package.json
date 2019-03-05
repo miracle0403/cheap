@@ -1,0 +1,31 @@
+{
+  "name": "namecheapjs",
+  "version": "1.0.0",
+  "description": "A simple namecheap api for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miracle0403/Namecheapjs.git"
+  },
+  "keywords": [
+    "namecheap api",
+    "namecheap nodejs",
+    "namecheap js",
+    "namecheapjs",
+    "namecheap npm",
+    "node-namecheap"
+  ],
+  "author": "Miracle Lawrence",
+  "license": "ISC",
+  "bugs": {
+  		"url": "https://github.com/miracle0403/Namecheapjs/issues"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "xml-js": "^1.6.11"
+  },
+  "homepage": "https://github.com/miracle0403/Namecheap#readme"
+}
